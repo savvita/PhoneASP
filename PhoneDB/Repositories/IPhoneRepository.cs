@@ -6,6 +6,8 @@ namespace PhoneDB.Repositories
     {
         Task<IEnumerable<PhoneModel>> GetAllPhonesAsync();
         Task<PhoneModel?> GetPhoneByIdAsync(int id);
-        Task<PhoneModel?> AddPhone(PhoneModel model);
+        Task<PhoneModel> AddPhoneAsync(PhoneModel model);
+        Task<PhoneModel?> UpdatePhoneAsync(PhoneModel model);
+        Task<bool> RemoveAsync(int id);
     }
 }
